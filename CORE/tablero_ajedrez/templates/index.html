@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Asignacion tablero{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Tablero de ajedrez</h1>
+    <div class="tablero">
+        {% for row in range(filas) %}
+        <div class="row">
+            {% for col in range(columnas) %}
+                <div class="{{ 'color1' if (row + col) % 2 == 0 else 'color2' }}"></div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
