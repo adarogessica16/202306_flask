@@ -9,10 +9,10 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h1 class="card-title">Información Enviada</h1>
-                    <p class="card-text">Nombre: {{ name }}</p>
-                    <p class="card-text">Locación: {{ location }}</p>
-                    <p class="card-text">Lenguaje de Programación Favorito: {{ language }}</p>
-                    <p class="card-text">Comentarios: {{ comment }}</p>
+                    <p class="card-text">Nombre: {{session['name']}}</p>
+                    <p class="card-text">Locación: {{session['location']}}</p>
+                    <p class="card-text">Lenguaje de Programación Favorito: {{session['language']}}</p>
+                    <p class="card-text">Comentarios: {{session['comment']}}</p>
                     <a href="/" class="btn btn-primary mt-3">Volver</a>
                 </div>
             </div>
